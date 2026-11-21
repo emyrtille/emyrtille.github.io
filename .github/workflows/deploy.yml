@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Build and upload Astro site
         uses: withastro/action@v6
         with:
@@ -34,4 +34,4 @@ jobs:
     steps:
       - name: Deploy website
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
