@@ -1,4 +1,11 @@
 ---
+import { getCollection } from 'astro:content';
+const expertiseOrder = ['backend-engineering', 'performance-reliability', 'architecture-system-evolution', 'developer-experience-automation', 'technical-collaboration-delivery'];
+const expertiseEntries = await getCollection('expertise');
+const expertise = expertiseOrder
+  .map((id) => expertiseEntries.find((entry) => entry.id === id))
+  .filter((entry): entry is (typeof expertiseEntries)[number] => entry !== undefined);
+
 const focusAreas = [
   { index: '01', title: 'Build', description: 'Designing and shipping software, one thoughtful decision at a time.' },
   { index: '02', title: 'Explore', description: 'Trying things out, asking questions, and finding a way through uncertainty.' },
@@ -49,6 +56,7 @@ const work = [
         <a class="brand" href="#top" aria-label="Emy, home">emy<span class="brand-dot">.</span>dev</a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
+          <a href="#expertise">Expertise</a>
           <a href="#about">About</a>
           <a href="https://github.com/emyrtille" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </nav>
@@ -111,7 +119,7 @@ const work = [
               <p class="eyebrow accent">SOME OF WHAT I DO</p>
               <h2 id="work-title">Selected <em>work.</em></h2>
             </div>
-            <p>A few areas I've been working in. Concrete project stories will take shape here as this little corner of the web grows.</p>
+            <p>A few areas I've been working in. A glimpse of the problems I like working on, from backend integrations to better developer workflows.</p>
           </div>
           <div class="work-grid">
             {work.map((item) => (
@@ -127,6 +135,28 @@ const work = [
                   <p>{item.description}</p>
                 </div>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="expertise-section" id="expertise" aria-labelledby="expertise-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow accent">A CLOSER LOOK</p>
+              <h2 id="expertise-title">Areas of <em>expertise.</em></h2>
+            </div>
+            <p>Five perspectives on my engineering work, from building backend services to helping teams deliver them.</p>
+          </div>
+          <div class="expertise-list">
+            {expertise.map((entry, index) => (
+              <a class="expertise-link" href={`/expertise/${entry.id}/`} aria-label={`Explore ${entry.data.title}`}>
+                <span class="expertise-number">{String(index + 1).padStart(2, '0')} /</span>
+                <span class="expertise-info">
+                  <span class="expertise-name">{entry.data.title}</span>
+                  <span class="expertise-description">{entry.data.description}</span>
+                </span>
+                <span class="expertise-arrow" aria-hidden="true">↗</span>
+              </a>
             ))}
           </div>
         </section>
@@ -205,6 +235,16 @@ const work = [
   .work-card-body{padding:26px 25px 30px}.work-category{color:#e7a18c;font-size:.6rem;letter-spacing:.07em;margin-bottom:14px}.work-category span{color:#849d8b;margin-right:8px}
   .work-card h3{font-family:'Instrument Serif',Georgia,serif;font-size:2rem;font-weight:400;margin:0 0 10px;line-height:1.03}
   .work-card-body>p:last-child{color:#aebbb0;font-size:.83rem;line-height:1.65;margin:0}
+  .expertise-section{border-top:1px solid #303932;padding:100px 0 115px;scroll-margin-top:28px}
+  .expertise-list{border-top:1px solid #303932}
+  .expertise-link{display:grid;grid-template-columns:72px minmax(0,1fr) 40px;align-items:center;gap:22px;padding:26px 16px 28px 0;border-bottom:1px solid #303932;transition:background .2s,border-color .2s}
+  .expertise-link:hover,.expertise-link:focus-visible{background:#19221c;border-color:#617e65}
+  .expertise-number{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.1em;color:#e99a86;align-self:start;padding-top:7px}
+  .expertise-info{display:flex;flex-direction:column;gap:8px;min-width:0}
+  .expertise-name{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.8rem,3vw,2.65rem);line-height:1.1}
+  .expertise-description{font-size:.84rem;color:#aebbb0;line-height:1.6;max-width:690px}
+  .expertise-arrow{font-size:1.35rem;color:#e99a86;justify-self:end;transition:transform .2s}
+  .expertise-link:hover .expertise-arrow{transform:translate(3px,-3px)}
   .about-section{border-top:1px solid #303932;padding:90px 0 120px}
   .about-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:80px}
   .about-section h2{font-size:clamp(3.2rem,5vw,5.8rem);line-height:1.08}
@@ -212,6 +252,6 @@ const work = [
   .about-copy p{line-height:1.8;color:#b6c3b7;font-size:.97rem}.about-copy .text-link{margin-top:14px}
   .site-footer{border-top:1px solid #303932;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:115px}.site-footer span{color:#879b8b;font-size:.75rem}.site-footer>a:last-child{font-size:.8rem}
   @media(max-width:1000px){.hero{grid-template-columns:1fr .6fr;min-height:580px}.hero-copy{padding:80px 0}.hero-art{min-height:490px}.botanical{height:480px;width:400px;max-width:none;transform:translate(60px,20px)}h1{font-size:clamp(3.3rem,6vw,5.2rem);white-space:normal;overflow-wrap:normal}.work-visual{height:170px}.work-card h3{font-size:1.7rem}.focus{grid-template-columns:repeat(2,1fr);row-gap:30px}.focus-item:nth-child(2){border-right:0}.focus-item:nth-child(3),.focus-item:nth-child(4){padding-top:20px;border-top:1px solid #303932}}
-  @media(max-width:690px){.site-header{min-height:76px}.brand{font-size:1.4rem}nav{gap:17px;font-size:.76rem}nav a:nth-child(2){display:none}.hero{min-height:unset;display:block;overflow:hidden}.hero-copy{padding:92px 0 65px}.hero .eyebrow{font-size:.58rem;gap:8px}h1{font-size:clamp(3.75rem,12vw,6rem);white-space:normal;margin:26px 0}.hero-intro{max-width:410px}.hero-art{height:230px;min-height:230px;margin-top:-60px;pointer-events:none;opacity:.38;justify-content:end}.art-halo{width:270px;height:270px}.botanical{height:360px;width:320px;transform:translate(80px,-50px)}.art-caption{display:none}.hero-actions{gap:22px}.focus{padding:28px 0;gap:18px}.focus-item{padding-right:12px}.focus-item h2{font-size:1.75rem}.focus-item p{font-size:.76rem}.work-section{padding:75px 0 85px}.section-heading{display:block;margin-bottom:27px}.section-heading>p{margin:20px 0 0}.work-grid{grid-template-columns:1fr;gap:16px}.work-visual{height:195px}.work-card-body{padding:22px}.about-section{padding:65px 0 75px}.about-layout{display:block}.about-copy{padding-top:28px}.site-footer{flex-wrap:wrap;padding:27px 0;min-height:unset}.site-footer span{order:3;width:100%}}
-  @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.button-primary,.work-card,.text-link{transition:none}.button-primary:hover,.work-card:hover{transform:none}}
+  @media(max-width:690px){.site-header{min-height:76px}.brand{font-size:1.4rem}nav{gap:14px;font-size:.74rem}nav a[href="#about"]{display:none}.hero{min-height:unset;display:block;overflow:hidden}.hero-copy{padding:92px 0 65px}.hero .eyebrow{font-size:.58rem;gap:8px}h1{font-size:clamp(3.75rem,12vw,6rem);white-space:normal;margin:26px 0}.hero-intro{max-width:410px}.hero-art{height:230px;min-height:230px;margin-top:-60px;pointer-events:none;opacity:.38;justify-content:end}.art-halo{width:270px;height:270px}.botanical{height:360px;width:320px;transform:translate(80px,-50px)}.art-caption{display:none}.hero-actions{gap:22px}.focus{padding:28px 0;gap:18px}.focus-item{padding-right:12px}.focus-item h2{font-size:1.75rem}.focus-item p{font-size:.76rem}.work-section{padding:75px 0 85px}.expertise-section{padding:70px 0 80px}.expertise-link{grid-template-columns:38px minmax(0,1fr) 22px;gap:10px;padding:22px 6px 24px 0}.expertise-name{font-size:1.85rem}.expertise-description{font-size:.78rem}.expertise-arrow{font-size:1.1rem}.section-heading{display:block;margin-bottom:27px}.section-heading>p{margin:20px 0 0}.work-grid{grid-template-columns:1fr;gap:16px}.work-visual{height:195px}.work-card-body{padding:22px}.about-section{padding:65px 0 75px}.about-layout{display:block}.about-copy{padding-top:28px}.site-footer{flex-wrap:wrap;padding:27px 0;min-height:unset}.site-footer span{order:3;width:100%}}
+  @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.button-primary,.work-card,.text-link{transition:none}.button-primary:hover,.work-card:hover,.expertise-link:hover .expertise-arrow{transform:none}}
 </style>
