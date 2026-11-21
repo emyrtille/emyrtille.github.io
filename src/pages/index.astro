@@ -13,29 +13,7 @@ const focusAreas = [
   { index: '04', title: 'Care', description: 'Paying attention to reliability, performance, and the people using what we build.' },
 ];
 
-const work = [
-  {
-    number: '01',
-    category: 'APIs · Integration',
-    title: 'Connecting the pieces',
-    description: 'Designing APIs and partner integrations with maintainability in mind.',
-    visual: 'connections',
-  },
-  {
-    number: '02',
-    category: 'Developer experience',
-    title: 'Making room to build',
-    description: 'Improving the tools and workflows developers rely on every day.',
-    visual: 'workflow',
-  },
-  {
-    number: '03',
-    category: 'Reliability · Observability',
-    title: 'Understanding what happens',
-    description: 'Working on performance, monitoring, and more observable systems.',
-    visual: 'signals',
-  },
-];
+
 ---
 <!doctype html>
 <html lang="en">
@@ -55,10 +33,8 @@ const work = [
       <header class="site-header">
         <a class="brand" href="#top" aria-label="Emy, home">emy<span class="brand-dot">.</span>dev</a>
         <nav aria-label="Main navigation">
-          <a href="#work">Work</a>
           <a href="#expertise">Expertise</a>
           <a href="#about">About</a>
-          <a href="https://github.com/emyrtille" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </nav>
       </header>
 
@@ -69,7 +45,7 @@ const work = [
             <h1 id="hero-title">Building software,<br /> <em>with care.</em></h1>
             <p class="hero-intro">Hi, I'm Emy. I like turning complex ideas into useful software — and making the journey a little smoother for the people building it.</p>
             <div class="hero-actions">
-              <a class="button-primary" href="#work">Explore my work <span aria-hidden="true">↗</span></a>
+              <a class="button-primary" href="#expertise">Explore my expertise <span aria-hidden="true">↗</span></a>
               <a class="text-link" href="#about">A little about me <span aria-hidden="true">↗</span></a>
             </div>
           </div>
@@ -77,27 +53,25 @@ const work = [
           <div class="hero-art" aria-hidden="true">
             <div class="art-halo"></div>
             <svg class="botanical" viewBox="0 0 560 660" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="stem" x1="130" y1="550" x2="460" y2="90" gradientUnits="userSpaceOnUse"><stop stop-color="#253e32"/><stop offset="1" stop-color="#739778"/></linearGradient>
-                <linearGradient id="leaf" x1="20" y1="0" x2="210" y2="220" gradientUnits="userSpaceOnUse"><stop stop-color="#496b53"/><stop offset=".52" stop-color="#234334"/><stop offset="1" stop-color="#142b24"/></linearGradient>
-                <linearGradient id="leafB" x1="0" y1="0" x2="190" y2="210" gradientUnits="userSpaceOnUse"><stop stop-color="#65866a"/><stop offset=".55" stop-color="#2e503f"/><stop offset="1" stop-color="#152c24"/></linearGradient>
-              </defs>
-              <path d="M170 676C199 535 274 439 316 341C359 241 355 155 370 40" stroke="url(#stem)" stroke-width="7" stroke-linecap="round"/>
-              <path d="M247 483C180 436 140 386 101 336M293 398C375 376 420 346 473 284M325 316C267 245 223 198 165 169M345 240C409 212 454 165 491 111" stroke="#5f8169" stroke-width="4" stroke-linecap="round"/>
-              <path d="M104 332C15 325-3 250 22 186C100 198 141 259 104 332Z" fill="url(#leaf)"/>
-              <path d="M104 332C81 267 51 227 22 186M93 297L50 272M72 255L109 247" stroke="#88a38a" stroke-opacity=".48" stroke-width="2"/>
-              <path d="M165 170C96 130 100 55 141 16C210 51 225 124 165 170Z" fill="url(#leafB)"/>
-              <path d="M165 170C163 115 154 61 141 16M162 129L120 100M162 100L197 82" stroke="#93aa8d" stroke-opacity=".48" stroke-width="2"/>
-              <path d="M477 284C482 205 542 170 558 181C561 249 534 285 477 284Z" fill="url(#leafB)"/>
-              <path d="M477 284C506 238 530 204 558 181M501 247L484 212" stroke="#9bac93" stroke-opacity=".45" stroke-width="2"/>
-              <path d="M491 110C443 57 459 5 490-18C550 36 540 84 491 110Z" fill="url(#leaf)"/>
-              <path d="M491 110C496 71 493 22 490-18" stroke="#9bac93" stroke-opacity=".5" stroke-width="2"/>
-              <path d="M316 345C385 275 405 203 392 156C310 186 284 277 316 345Z" fill="url(#leafB)"/>
-              <path d="M316 345C344 259 369 206 392 156M340 284L307 256M359 245L383 262" stroke="#9bac93" stroke-opacity=".48" stroke-width="2"/>
-              <path d="M249 478C179 479 117 524 103 591C198 607 250 557 249 478Z" fill="url(#leaf)"/>
-              <path d="M249 478C195 523 144 562 103 591M199 521L157 508" stroke="#8aa68b" stroke-opacity=".42" stroke-width="2"/>
-              <path d="M383 610C423 546 495 530 534 554C516 623 453 662 383 610Z" fill="url(#leafB)" opacity=".65"/>
-              <path d="M269 448C313 519 342 566 383 610" stroke="#41634e" stroke-width="4"/>
+              <g stroke-linecap="round" stroke-linejoin="round">
+                <path d="M198 650C220 539 266 462 313 379C370 278 383 163 381 37" stroke="#75977B" stroke-width="2.1"/>
+                <path d="M247 501C193 472 148 421 122 367M285 430C358 413 417 374 456 322M337 331C272 283 224 226 194 158M373 214C431 179 469 132 486 83" stroke="#6F9479" stroke-width="1.6"/>
+                <path d="M122 367C47 358 20 300 37 238C103 252 140 301 122 367Z" stroke="#91AE92" stroke-width="1.4"/>
+                <path d="M122 367C96 308 67 270 37 238M110 332L70 311M93 298L119 280" stroke="#63836C" stroke-width="1"/>
+                <path d="M194 158C135 121 127 63 157 19C211 54 225 111 194 158Z" stroke="#A4B7A1" stroke-width="1.4"/>
+                <path d="M194 158C182 105 169 59 157 19M184 119L151 94M176 89L200 74" stroke="#63836C" stroke-width="1"/>
+                <path d="M456 322C462 246 508 216 547 225C547 292 516 326 456 322Z" stroke="#A4B7A1" stroke-width="1.4"/>
+                <path d="M456 322C494 274 521 243 547 225M494 277L476 253" stroke="#63836C" stroke-width="1"/>
+                <path d="M486 83C444 51 451 7 477 -18C525 16 526 56 486 83Z" stroke="#91AE92" stroke-width="1.4"/>
+                <path d="M486 83C484 52 481 15 477 -18" stroke="#63836C" stroke-width="1"/>
+                <path d="M337 331C391 277 418 222 415 177C348 199 317 269 337 331Z" stroke="#A4B7A1" stroke-width="1.4"/>
+                <path d="M337 331C364 266 391 214 415 177M363 267L337 249M382 229L405 244" stroke="#63836C" stroke-width="1"/>
+                <path d="M247 501C174 504 128 551 123 610C204 618 252 569 247 501Z" stroke="#91AE92" stroke-width="1.4"/>
+                <path d="M247 501C200 547 157 582 123 610M201 546L167 536" stroke="#63836C" stroke-width="1"/>
+                <path d="M276.5 444C338 504 372 555 413 600" stroke="#6F9479" stroke-width="1.5"/>
+                <path d="M413 600C458 552 513 550 539 575C513 629 460 639 413 600Z" stroke="#91AE92" stroke-width="1.4"/>
+                <path d="M413 600C462 593 503 582 539 575" stroke="#63836C" stroke-width="1"/>
+              </g>
             </svg>
             <span class="art-caption">A little room to grow.</span>
           </div>
@@ -111,32 +85,6 @@ const work = [
               <p>{area.description}</p>
             </article>
           ))}
-        </section>
-
-        <section class="work-section" id="work" aria-labelledby="work-title">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow accent">SOME OF WHAT I DO</p>
-              <h2 id="work-title">Selected <em>work.</em></h2>
-            </div>
-            <p>A few areas I've been working in. A glimpse of the problems I like working on, from backend integrations to better developer workflows.</p>
-          </div>
-          <div class="work-grid">
-            {work.map((item) => (
-              <article class="work-card">
-                <div class={`work-visual visual-${item.visual}`} aria-hidden="true">
-                  {item.visual === 'connections' && <div class="connection-art"><span></span><span></span><span></span><span></span><span></span></div>}
-                  {item.visual === 'workflow' && <div class="workflow-art"><div></div><div></div><div></div></div>}
-                  {item.visual === 'signals' && <div class="signal-art"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>}
-                </div>
-                <div class="work-card-body">
-                  <p class="work-category"><span>{item.number} /</span> {item.category}</p>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
         </section>
 
         <section class="expertise-section" id="expertise" aria-labelledby="expertise-title">
@@ -168,7 +116,6 @@ const work = [
             <div class="about-copy">
               <p>I'm a software engineer based near Lyon, France. I enjoy working close to the code, exploring ideas through prototypes, and building software that is pleasant to use and maintain.</p>
               <p>My work spans APIs, integrations, developer experience, performance, and technical decisions made alongside product teams. I care about the details, but also about keeping things simple.</p>
-              <a class="text-link" href="https://github.com/emyrtille" target="_blank" rel="noopener noreferrer">Find me on GitHub <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </section>
@@ -176,8 +123,7 @@ const work = [
 
       <footer class="site-footer">
         <a class="brand" href="#top">emy<span class="brand-dot">.</span>dev</a>
-        <span>Made with care, and a little greenery.</span>
-        <a href="https://github.com/emyrtille" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <span>Made with care.</span>
       </footer>
     </div>
   </body>
@@ -208,33 +154,16 @@ const work = [
   .button-primary:hover{background:#f4af9d;transform:translateY(-2px)}
   .text-link{font-size:.83rem;font-weight:600;border-bottom:1px solid #748579;padding-bottom:5px;display:inline-flex;gap:20px;align-items:center;transition:color .2s}
   .hero-art{height:100%;min-height:600px;position:relative;display:flex;align-items:center;justify-content:center}
-  .art-halo{position:absolute;width:550px;height:550px;max-width:100%;border-radius:50%;background:radial-gradient(circle,#273d30 0%,#1c2c23 29%,transparent 69%);filter:blur(25px);opacity:.55}
-  .botanical{width:min(100%,530px);height:610px;position:relative;transform:translate(55px,35px);filter:drop-shadow(25px 35px 25px #0a120dbb)}
+  .art-halo{position:absolute;width:550px;height:550px;max-width:100%;border-radius:50%;background:radial-gradient(circle,#273d30 0%,#1c2c23 29%,transparent 69%);filter:blur(25px);opacity:.35}
+  .botanical{width:min(100%,530px);height:610px;position:relative;transform:translate(55px,35px);opacity:.82;filter:drop-shadow(0 12px 20px #0a120d55)}
   .art-caption{position:absolute;bottom:65px;right:0;letter-spacing:.04em;text-transform:none;color:#748979;font-family:'Instrument Serif',serif;font-style:italic;font-size:1rem}
   .focus{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid #303932;padding:35px 0 37px;gap:23px}
   .focus-item{border-right:1px solid #303932;padding:0 23px 0 0}.focus-item:last-child{border:0}
   .focus-index{color:#e59483;font-size:.65rem}
   .focus-item h2{font-size:2rem;margin:13px 0 8px}.focus-item p{font-size:.79rem;line-height:1.65;color:#a9b8ac;max-width:240px;margin-bottom:0}
-  .work-section{padding:115px 0 120px}
   .section-heading{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:42px}
   .accent{color:#e99a86}.section-heading h2,.about-section h2{font-size:clamp(3.7rem,5.8vw,6rem);line-height:1;margin:20px 0 0}
   .section-heading>p{color:#9caea0;font-size:.88rem;max-width:340px;line-height:1.7;margin-bottom:3px}
-  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
-  .work-card{background:#19221c;min-width:0;border:1px solid #2a392e;transition:border-color .2s,transform .2s}.work-card:hover{border-color:#617e65;transform:translateY(-3px)}
-  .work-visual{height:220px;display:flex;justify-content:center;align-items:center;overflow:hidden;position:relative}
-  .visual-connections{background:radial-gradient(circle at 60% 45%,#335345,#16271e 70%)}
-  .visual-workflow{background:linear-gradient(135deg,#1d3027,#405548 60%,#1a2b22)}
-  .visual-signals{background:radial-gradient(ellipse at 40% 100%,#3f5b4a,#15271e 70%)}
-  .connection-art{position:relative;width:190px;height:120px;border:1px solid #78978065;border-radius:90px;transform:rotate(-25deg)}
-  .connection-art:before,.connection-art:after{content:'';position:absolute;border:1px solid #83a58c66;border-radius:90px;inset:20px -28px;transform:rotate(55deg)}
-  .connection-art:after{inset:35px -40px;transform:rotate(-35deg)}
-  .connection-art span{position:absolute;width:9px;height:9px;border-radius:50%;background:#d0a18a;z-index:2}
-  .connection-art span:nth-child(1){top:-4px;left:65px}.connection-art span:nth-child(2){top:40px;right:-5px}.connection-art span:nth-child(3){bottom:-4px;left:60px}.connection-art span:nth-child(4){left:-5px;top:42px}.connection-art span:nth-child(5){left:95px;top:55px}
-  .workflow-art{display:flex;gap:18px;align-items:center;transform:rotate(-8deg)}.workflow-art div{height:95px;width:60px;border:1px solid #94ad9788;background:#213b2f;box-shadow:8px 10px 0 #101e1866}.workflow-art div:nth-child(2){height:130px;background:#496b54}.workflow-art div:nth-child(3){height:75px;background:#2d4b3b}
-  .signal-art{display:flex;align-items:end;gap:11px;height:110px}.signal-art span{width:12px;background:#8daa90aa;border-radius:12px}.signal-art span:nth-child(1){height:24px}.signal-art span:nth-child(2){height:61px}.signal-art span:nth-child(3){height:85px}.signal-art span:nth-child(4){height:43px;background:#e69a88}.signal-art span:nth-child(5){height:107px}.signal-art span:nth-child(6){height:66px}.signal-art span:nth-child(7){height:38px}
-  .work-card-body{padding:26px 25px 30px}.work-category{color:#e7a18c;font-size:.6rem;letter-spacing:.07em;margin-bottom:14px}.work-category span{color:#849d8b;margin-right:8px}
-  .work-card h3{font-family:'Instrument Serif',Georgia,serif;font-size:2rem;font-weight:400;margin:0 0 10px;line-height:1.03}
-  .work-card-body>p:last-child{color:#aebbb0;font-size:.83rem;line-height:1.65;margin:0}
   .expertise-section{border-top:1px solid #303932;padding:100px 0 115px;scroll-margin-top:28px}
   .expertise-list{border-top:1px solid #303932}
   .expertise-link{display:grid;grid-template-columns:72px minmax(0,1fr) 40px;align-items:center;gap:22px;padding:26px 16px 28px 0;border-bottom:1px solid #303932;transition:background .2s,border-color .2s}
@@ -251,7 +180,7 @@ const work = [
   .about-copy{padding-top:20px;max-width:480px}
   .about-copy p{line-height:1.8;color:#b6c3b7;font-size:.97rem}.about-copy .text-link{margin-top:14px}
   .site-footer{border-top:1px solid #303932;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:115px}.site-footer span{color:#879b8b;font-size:.75rem}.site-footer>a:last-child{font-size:.8rem}
-  @media(max-width:1000px){.hero{grid-template-columns:1fr .6fr;min-height:580px}.hero-copy{padding:80px 0}.hero-art{min-height:490px}.botanical{height:480px;width:400px;max-width:none;transform:translate(60px,20px)}h1{font-size:clamp(3.3rem,6vw,5.2rem);white-space:normal;overflow-wrap:normal}.work-visual{height:170px}.work-card h3{font-size:1.7rem}.focus{grid-template-columns:repeat(2,1fr);row-gap:30px}.focus-item:nth-child(2){border-right:0}.focus-item:nth-child(3),.focus-item:nth-child(4){padding-top:20px;border-top:1px solid #303932}}
-  @media(max-width:690px){.site-header{min-height:76px}.brand{font-size:1.4rem}nav{gap:14px;font-size:.74rem}nav a[href="#about"]{display:none}.hero{min-height:unset;display:block;overflow:hidden}.hero-copy{padding:92px 0 65px}.hero .eyebrow{font-size:.58rem;gap:8px}h1{font-size:clamp(3.75rem,12vw,6rem);white-space:normal;margin:26px 0}.hero-intro{max-width:410px}.hero-art{height:230px;min-height:230px;margin-top:-60px;pointer-events:none;opacity:.38;justify-content:end}.art-halo{width:270px;height:270px}.botanical{height:360px;width:320px;transform:translate(80px,-50px)}.art-caption{display:none}.hero-actions{gap:22px}.focus{padding:28px 0;gap:18px}.focus-item{padding-right:12px}.focus-item h2{font-size:1.75rem}.focus-item p{font-size:.76rem}.work-section{padding:75px 0 85px}.expertise-section{padding:70px 0 80px}.expertise-link{grid-template-columns:38px minmax(0,1fr) 22px;gap:10px;padding:22px 6px 24px 0}.expertise-name{font-size:1.85rem}.expertise-description{font-size:.78rem}.expertise-arrow{font-size:1.1rem}.section-heading{display:block;margin-bottom:27px}.section-heading>p{margin:20px 0 0}.work-grid{grid-template-columns:1fr;gap:16px}.work-visual{height:195px}.work-card-body{padding:22px}.about-section{padding:65px 0 75px}.about-layout{display:block}.about-copy{padding-top:28px}.site-footer{flex-wrap:wrap;padding:27px 0;min-height:unset}.site-footer span{order:3;width:100%}}
-  @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.button-primary,.work-card,.text-link{transition:none}.button-primary:hover,.work-card:hover,.expertise-link:hover .expertise-arrow{transform:none}}
+  @media(max-width:1000px){.hero{grid-template-columns:1fr .6fr;min-height:580px}.hero-copy{padding:80px 0}.hero-art{min-height:490px}.botanical{height:480px;width:400px;max-width:none;transform:translate(60px,20px)}h1{font-size:clamp(3.3rem,6vw,5.2rem);white-space:normal;overflow-wrap:normal}.focus{grid-template-columns:repeat(2,1fr);row-gap:30px}.focus-item:nth-child(2){border-right:0}.focus-item:nth-child(3),.focus-item:nth-child(4){padding-top:20px;border-top:1px solid #303932}}
+  @media(max-width:690px){.site-header{min-height:76px}.brand{font-size:1.4rem}nav{gap:17px;font-size:.76rem}.hero{min-height:unset;display:block;overflow:hidden}.hero-copy{padding:92px 0 65px}.hero .eyebrow{font-size:.58rem;gap:8px}h1{font-size:clamp(3.75rem,12vw,6rem);white-space:normal;margin:26px 0}.hero-intro{max-width:410px}.hero-art{height:230px;min-height:230px;margin-top:-60px;pointer-events:none;opacity:.38;justify-content:end}.art-halo{width:270px;height:270px}.botanical{height:360px;width:320px;transform:translate(80px,-50px)}.art-caption{display:none}.hero-actions{gap:22px}.focus{padding:28px 0;gap:18px}.focus-item{padding-right:12px}.focus-item h2{font-size:1.75rem}.focus-item p{font-size:.76rem}.expertise-section{padding:70px 0 80px}.expertise-link{grid-template-columns:38px minmax(0,1fr) 22px;gap:10px;padding:22px 6px 24px 0}.expertise-name{font-size:1.85rem}.expertise-description{font-size:.78rem}.expertise-arrow{font-size:1.1rem}.section-heading{display:block;margin-bottom:27px}.section-heading>p{margin:20px 0 0}.about-section{padding:65px 0 75px}.about-layout{display:block}.about-copy{padding-top:28px}.site-footer{flex-wrap:wrap;padding:27px 0;min-height:unset}.site-footer span{width:auto}}
+  @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.button-primary,.text-link,.expertise-link,.expertise-arrow{transition:none}.button-primary:hover,.expertise-link:hover .expertise-arrow{transform:none}}
 </style>
