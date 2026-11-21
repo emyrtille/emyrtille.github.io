@@ -50,31 +50,7 @@ const focusAreas = [
             </div>
           </div>
 
-          <div class="hero-art" aria-hidden="true">
-            <div class="art-halo"></div>
-            <svg class="botanical" viewBox="0 0 560 660" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g stroke-linecap="round" stroke-linejoin="round">
-                <path d="M198 650C220 539 266 462 313 379C370 278 383 163 381 37" stroke="#75977B" stroke-width="2.1"/>
-                <path d="M247 501C193 472 148 421 122 367M285 430C358 413 417 374 456 322M337 331C272 283 224 226 194 158M373 214C431 179 469 132 486 83" stroke="#6F9479" stroke-width="1.6"/>
-                <path d="M122 367C47 358 20 300 37 238C103 252 140 301 122 367Z" stroke="#91AE92" stroke-width="1.4"/>
-                <path d="M122 367C96 308 67 270 37 238M110 332L70 311M93 298L119 280" stroke="#63836C" stroke-width="1"/>
-                <path d="M194 158C135 121 127 63 157 19C211 54 225 111 194 158Z" stroke="#A4B7A1" stroke-width="1.4"/>
-                <path d="M194 158C182 105 169 59 157 19M184 119L151 94M176 89L200 74" stroke="#63836C" stroke-width="1"/>
-                <path d="M456 322C462 246 508 216 547 225C547 292 516 326 456 322Z" stroke="#A4B7A1" stroke-width="1.4"/>
-                <path d="M456 322C494 274 521 243 547 225M494 277L476 253" stroke="#63836C" stroke-width="1"/>
-                <path d="M486 83C444 51 451 7 477 -18C525 16 526 56 486 83Z" stroke="#91AE92" stroke-width="1.4"/>
-                <path d="M486 83C484 52 481 15 477 -18" stroke="#63836C" stroke-width="1"/>
-                <path d="M337 331C391 277 418 222 415 177C348 199 317 269 337 331Z" stroke="#A4B7A1" stroke-width="1.4"/>
-                <path d="M337 331C364 266 391 214 415 177M363 267L337 249M382 229L405 244" stroke="#63836C" stroke-width="1"/>
-                <path d="M247 501C174 504 128 551 123 610C204 618 252 569 247 501Z" stroke="#91AE92" stroke-width="1.4"/>
-                <path d="M247 501C200 547 157 582 123 610M201 546L167 536" stroke="#63836C" stroke-width="1"/>
-                <path d="M276.5 444C338 504 372 555 413 600" stroke="#6F9479" stroke-width="1.5"/>
-                <path d="M413 600C458 552 513 550 539 575C513 629 460 639 413 600Z" stroke="#91AE92" stroke-width="1.4"/>
-                <path d="M413 600C462 593 503 582 539 575" stroke="#63836C" stroke-width="1"/>
-              </g>
-            </svg>
-            <span class="art-caption">A little room to grow.</span>
-          </div>
+
         </section>
 
         <section class="focus" aria-label="What I like working on">
@@ -140,23 +116,19 @@ const focusAreas = [
   .brand{font-weight:700;letter-spacing:-.075em;font-size:1.6rem}.brand-dot{color:#e99583}
   nav{display:flex;align-items:center;gap:clamp(20px,3vw,50px);font-size:.82rem;color:#cdd5cb}
   nav a:hover,.site-footer a:hover,.text-link:hover{color:#ef9d89}
-  .hero{min-height:630px;display:grid;grid-template-columns:1.18fr .82fr;position:relative;align-items:center;gap:30px;overflow:hidden}
-  .hero-copy{position:relative;z-index:2;padding:80px 0 95px}
-  .eyebrow,.focus-index,.work-category,.art-caption{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:#a1b2a4}
+  .hero{min-height:570px;display:flex;align-items:center;position:relative}
+  .hero-copy{position:relative;max-width:950px;padding:100px 0 110px}
+  .eyebrow,.focus-index{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:#a1b2a4}
   .eyebrow{display:flex;align-items:center;gap:12px}.eyebrow-separator{opacity:.45}.status-dot{display:inline-block;width:7px;height:7px;background:#e88e7b;border-radius:50%}
   h1,h2,h3,p{margin-top:0}
   h1,h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.025em}
   h1{font-size:clamp(4.5rem,7.4vw,8rem);line-height:.94;margin:34px 0 29px;white-space:nowrap}
   em{font-weight:400;color:#e89b86}
-  .hero-intro{font-size:clamp(1rem,1.45vw,1.25rem);color:#bbc5bc;line-height:1.7;max-width:510px}
+  .hero-intro{font-size:clamp(1rem,1.45vw,1.25rem);color:#bbc5bc;line-height:1.7;max-width:600px}
   .hero-actions{display:flex;gap:32px;align-items:center;flex-wrap:wrap;margin-top:34px}
   .button-primary{background:#e99a86;color:#17201a;border-radius:3px;padding:16px 21px;font-size:.83rem;font-weight:700;display:inline-flex;gap:22px;align-items:center;transition:background .2s,transform .2s}
   .button-primary:hover{background:#f4af9d;transform:translateY(-2px)}
   .text-link{font-size:.83rem;font-weight:600;border-bottom:1px solid #748579;padding-bottom:5px;display:inline-flex;gap:20px;align-items:center;transition:color .2s}
-  .hero-art{height:100%;min-height:600px;position:relative;display:flex;align-items:center;justify-content:center}
-  .art-halo{position:absolute;width:550px;height:550px;max-width:100%;border-radius:50%;background:radial-gradient(circle,#273d30 0%,#1c2c23 29%,transparent 69%);filter:blur(25px);opacity:.35}
-  .botanical{width:min(100%,530px);height:610px;position:relative;transform:translate(55px,35px);opacity:.82;filter:drop-shadow(0 12px 20px #0a120d55)}
-  .art-caption{position:absolute;bottom:65px;right:0;letter-spacing:.04em;text-transform:none;color:#748979;font-family:'Instrument Serif',serif;font-style:italic;font-size:1rem}
   .focus{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid #303932;padding:35px 0 37px;gap:23px}
   .focus-item{border-right:1px solid #303932;padding:0 23px 0 0}.focus-item:last-child{border:0}
   .focus-index{color:#e59483;font-size:.65rem}
@@ -180,7 +152,7 @@ const focusAreas = [
   .about-copy{padding-top:20px;max-width:480px}
   .about-copy p{line-height:1.8;color:#b6c3b7;font-size:.97rem}.about-copy .text-link{margin-top:14px}
   .site-footer{border-top:1px solid #303932;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:115px}.site-footer span{color:#879b8b;font-size:.75rem}.site-footer>a:last-child{font-size:.8rem}
-  @media(max-width:1000px){.hero{grid-template-columns:1fr .6fr;min-height:580px}.hero-copy{padding:80px 0}.hero-art{min-height:490px}.botanical{height:480px;width:400px;max-width:none;transform:translate(60px,20px)}h1{font-size:clamp(3.3rem,6vw,5.2rem);white-space:normal;overflow-wrap:normal}.focus{grid-template-columns:repeat(2,1fr);row-gap:30px}.focus-item:nth-child(2){border-right:0}.focus-item:nth-child(3),.focus-item:nth-child(4){padding-top:20px;border-top:1px solid #303932}}
-  @media(max-width:690px){.site-header{min-height:76px}.brand{font-size:1.4rem}nav{gap:17px;font-size:.76rem}.hero{min-height:unset;display:block;overflow:hidden}.hero-copy{padding:92px 0 65px}.hero .eyebrow{font-size:.58rem;gap:8px}h1{font-size:clamp(3.75rem,12vw,6rem);white-space:normal;margin:26px 0}.hero-intro{max-width:410px}.hero-art{height:230px;min-height:230px;margin-top:-60px;pointer-events:none;opacity:.38;justify-content:end}.art-halo{width:270px;height:270px}.botanical{height:360px;width:320px;transform:translate(80px,-50px)}.art-caption{display:none}.hero-actions{gap:22px}.focus{padding:28px 0;gap:18px}.focus-item{padding-right:12px}.focus-item h2{font-size:1.75rem}.focus-item p{font-size:.76rem}.expertise-section{padding:70px 0 80px}.expertise-link{grid-template-columns:38px minmax(0,1fr) 22px;gap:10px;padding:22px 6px 24px 0}.expertise-name{font-size:1.85rem}.expertise-description{font-size:.78rem}.expertise-arrow{font-size:1.1rem}.section-heading{display:block;margin-bottom:27px}.section-heading>p{margin:20px 0 0}.about-section{padding:65px 0 75px}.about-layout{display:block}.about-copy{padding-top:28px}.site-footer{flex-wrap:wrap;padding:27px 0;min-height:unset}.site-footer span{width:auto}}
+  @media(max-width:1000px){.hero{min-height:520px}.hero-copy{padding:85px 0}h1{font-size:clamp(3.3rem,6vw,5.2rem);white-space:normal;overflow-wrap:normal}.focus{grid-template-columns:repeat(2,1fr);row-gap:30px}.focus-item:nth-child(2){border-right:0}.focus-item:nth-child(3),.focus-item:nth-child(4){padding-top:20px;border-top:1px solid #303932}}
+  @media(max-width:690px){.site-header{min-height:76px}.brand{font-size:1.4rem}nav{gap:17px;font-size:.76rem}.hero{min-height:unset;display:block}.hero-copy{padding:82px 0 80px}.hero .eyebrow{font-size:.58rem;gap:8px}h1{font-size:clamp(3.75rem,12vw,6rem);white-space:normal;margin:26px 0}.hero-intro{max-width:410px}.hero-actions{gap:22px}.focus{padding:28px 0;gap:18px}.focus-item{padding-right:12px}.focus-item h2{font-size:1.75rem}.focus-item p{font-size:.76rem}.expertise-section{padding:70px 0 80px}.expertise-link{grid-template-columns:38px minmax(0,1fr) 22px;gap:10px;padding:22px 6px 24px 0}.expertise-name{font-size:1.85rem}.expertise-description{font-size:.78rem}.expertise-arrow{font-size:1.1rem}.section-heading{display:block;margin-bottom:27px}.section-heading>p{margin:20px 0 0}.about-section{padding:65px 0 75px}.about-layout{display:block}.about-copy{padding-top:28px}.site-footer{flex-wrap:wrap;padding:27px 0;min-height:unset}.site-footer span{width:auto}}
   @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.button-primary,.text-link,.expertise-link,.expertise-arrow{transition:none}.button-primary:hover,.expertise-link:hover .expertise-arrow{transform:none}}
 </style>
