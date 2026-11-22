@@ -36,7 +36,7 @@ const { title, description, headline, headlineAccent, intro, company, topics } =
         <div class="meta"><span>{company}</span><span>{topics.join(' · ')}</span></div>
         <div class="prose"><slot /></div>
       </main>
-      <footer><a class="brand" href="/">emy<span>.</span>dev</a><span>Made with care, and a little greenery.</span></footer>
+      <footer><a class="brand" href="/">emy<span>.</span>dev</a><span>Made with care.</span></footer>
     </div>
   </body>
 </html>
@@ -73,6 +73,7 @@ const { title, description, headline, headlineAccent, intro, company, topics } =
   @media(max-width:690px){.header{min-height:76px}main{padding:70px 0 75px}h1{font-size:clamp(3.5rem,12vw,5rem)}section{padding:65px 0}.contributions article{padding:23px}footer{flex-wrap:wrap;padding:25px 0;min-height:unset}}
 
   /* Markdown content follows the existing editorial styling. */
+  .prose{margin-top:76px}
   .prose :global(h2){font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.13em;color:#e99a86;font-weight:400;margin:0 0 20px}
   .prose :global(h3){font-size:clamp(3rem,5.4vw,5rem);line-height:1.05;margin:0 0 30px}
   .prose :global(h3 em){color:#e89b86}
@@ -80,5 +81,5 @@ const { title, description, headline, headlineAccent, intro, company, topics } =
   .prose :global(h2:not(:first-child)){border-top:1px solid #303932;padding-top:85px;margin-top:85px}
   .prose :global(h4){font-size:2rem;margin:26px 0 10px;padding:27px 30px 0;background:#19221c;border:1px solid #2a392e;border-bottom:0}
   .prose :global(h4 + p){background:#19221c;border:1px solid #2a392e;border-top:0;padding:0 30px 27px;margin-top:-10px;max-width:none}
-  @media(max-width:690px){.prose :global(h2:not(:first-child)){padding-top:65px;margin-top:65px}.prose :global(h4){padding:23px 23px 0}.prose :global(h4 + p){padding:0 23px 23px}}
+  @media(max-width:690px){.prose{margin-top:56px}.prose :global(h2:not(:first-child)){padding-top:65px;margin-top:65px}.prose :global(h4){padding:23px 23px 0}.prose :global(h4 + p){padding:0 23px 23px}}
 </style>
